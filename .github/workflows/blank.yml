@@ -27,9 +27,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
-        run: echo hello 2
-        run: echo hello 3
+        run: | 
+          echo Hello, world!
+          echo Hello, world!2
+          echo Hello, world!3
+          echo Hello, world!4
+          echo Hello, world!5
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

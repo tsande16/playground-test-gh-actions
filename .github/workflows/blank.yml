@@ -27,9 +27,15 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "Hello, world! Hello, world!, Hello, world!" >> $GITHUB_OUTPUT
-      - name: Tail github output
-        run: tail -n 2 $GITHUB_OUTPUT
+        run: echo Hello, world! Hello, world!, Hello, world!
+        
+      - name: Generate list using Markdown
+        run: |
+          echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
+          echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
+          echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
+          echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

@@ -33,6 +33,8 @@ jobs:
           echo Hello, world!3
           echo Hello, world!4
           echo Hello, world!5
+      - name: suppress log
+        run: tail -n 2
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

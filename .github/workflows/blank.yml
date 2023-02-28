@@ -28,11 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: | 
-          echo Hello, world!
-          echo Hello, world!2
-          echo Hello, world!3
-          echo Hello, world!4
-          echo Hello, world!5 >> $GITHUB_OUTPUT
+          echo " Hello, world! Hello, world!5" >> $GITHUB_OUTPUT
       - name: Tail github output
         run: tail -f $GITHUB_OUTPUT
 
